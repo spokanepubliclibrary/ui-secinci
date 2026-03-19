@@ -1,6 +1,6 @@
 {
   "name": "@spokane-folio/security-incident",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Security incident tracking and trespass automation",
   "main": "src/index.js",
   "repository": "",
