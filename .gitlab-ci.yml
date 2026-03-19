@@ -1,0 +1,38 @@
+image: node:bullseye
+stages: 
+  - build 
+  - deploy
+
+generate-mod-descriptor:
+  stage: build
+  script: 
+    - apt-get update && apt-get install -y jq
+    - yarn install --frozen-lockfile
+    - yarn run build-mod-descriptor
+  artifacts: 
+    paths:
+    - module-descriptor.json
+  only:
+    - main
+
+publish-npm:
+  stage: deploy
+  dependencies: 
+    - generate-mod-descriptor 
+  script:
+    - git config --global user.email "chbrown@spokanelibrary.org"
+    - git config --global user.name "CB-SPL-Dev"
+    - echo "spokane-folio:registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - cat .npmrc
+    - yarn publish --registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/
+    - yarn pack 
+  artifacts:
+    paths:
+    - "*.tgz"
+    - module-descriptor.json
+    exclude: 
+    - .npmrc 
+    - .gitlab-ci.yml
+  only:
+    - main

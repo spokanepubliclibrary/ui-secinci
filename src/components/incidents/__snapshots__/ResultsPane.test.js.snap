@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing (snapshot) 1`] = `"<div panetitle="[object Object]" id="results-pane" defaultwidth="75%"><div>Mock GetIncidentTypesDetails</div><div style="height: 80vh; width: auto;"><div sortablefields="customers,incidentLocation,dateOfIncident,incidentTypes,incidentWitnesses,createdBy,trespassExpirationDates" sortedcolumn="" sortdirection="ascending" contentdata="" pageamount="20" totalcount="0" pagingoffset="0" pagingtype="prev-next" formatter="[object Object]" visiblecolumns="customers,incidentLocation" columnmapping="[object Object]" columnwidths="[object Object]"></div></div></div>"`;

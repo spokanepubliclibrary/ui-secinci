@@ -1,0 +1,146 @@
+{
+  "name": "@spokane-folio/security-incident",
+  "version": "1.0.21",
+  "description": "Security incident tracking and trespass automation",
+  "main": "src/index.js",
+  "repository": "",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "stripes serve",
+    "build": "stripes build --output ./output",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
+    "formatjs-compile": "stripes translate compile",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.9.0",
+    "@folio/eslint-config-stripes": "^7.0.0",
+    "@folio/jest-config-stripes": "^2.0.0",
+    "@folio/stripes": "^9.1.4",
+    "@folio/stripes-cli": "^3.0.0 || ^3.0.0",
+    "@folio/stripes-core": "^10.1.1",
+    "@folio/users": "^10.1.1",
+    "core-js": "^3.6.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "history": "^4.10.1",
+    "lodash": "^4.17.21",
+    "prettier": "^3.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.4",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "regenerator-runtime": "^0.13.3",
+    "yarn": "^1.22.22"
+  },
+  "dependencies": {
+    "dompurify": "^3.1.7",
+    "file-type": "^20.0.0",
+    "handlebars": "^4.7.8",
+    "html-entities": "^2.6.0",
+    "html2pdf.js": "0.9.3",
+    "prop-types": "^15.6.0",
+    "react-image": "^4.1.0",
+    "uuid": "^10.0.0"
+  },
+  "peerDependencies": {
+    "@folio/stripes": "^9.0.0",
+    "@folio/users": "^10.1.1",
+    "react": "18.2.0",
+    "react-intl": "^6.4.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "stripes": {
+    "actsAs": [
+      "app",
+      "settings"
+    ],
+    "displayName": "ui-security-incident.meta.title",
+    "route": "/incidents",
+    "icons": [
+      {
+        "name": "app",
+        "alt": "Create, view and update security incident reports",
+        "title": "Track"
+      }
+    ],
+    "okapiInterfaces": {
+      "users": "16.0",
+      "users-bl": "5.0 6.0",
+      "configuration": "2.0"
+    },
+    "permissionSets": [
+      {
+        "permissionName": "module.security-incident.enabled",
+        "displayName": "UI: security-incident module is enabled",
+        "visible": true
+      },
+      {
+        "permissionName": "settings.security-incident.enabled",
+        "displayName": "Settings (security-incident): display list of settings pages",
+        "subPermissions": [
+          "settings.enabled",
+          "configuration.entries.item.get",
+          "configuration.entries.collection.get",
+          "security-incident.configurations.get"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "settings.security-incident.edit",
+        "displayName": "Settings (security-incident): Edit settings",
+        "subPermissions": [
+          "settings.security-incident.enabled",
+          "configuration.entries.collection.get",
+          "configuration.entries.item.put",
+          "security-incident.configurations.get",
+          "security-incident.configurations.edit"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-security-incident.view",
+        "displayName": "Security Incident Report (security-incident): Search and view reports",
+        "description": "Can view incidents list and incident details. Can view endpoint at ui-users for linked customer.",
+        "subPermissions": [
+          "module.security-incident.enabled",
+          "security-incident.collection.get",
+          "configuration.entries.collection.get",
+          "users.item.get",
+          "users.collection.get",
+          "security-incident.configurations.get",
+          "inventory-storage.locations.collection.get"
+        ],
+        "visible": true
+      },
+      {
+        "permissionName": "ui-security-incident.edit",
+        "displayName": "Security Incident Report (security-incident): Search, create and edit reports",
+        "description": "Can create and edit incident details. Can view endpoint at ui-users for linked customer.",
+        "subPermissions": [
+          "ui-security-incident.view",
+          "security-incident.incident.edit",
+          "usergroups.collection.get"
+        ],
+        "visible": true
+      }
+    ]
+  }
+}

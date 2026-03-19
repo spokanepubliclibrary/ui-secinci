@@ -1,0 +1,4 @@
+{
+  "configFile": "stripes.config.js",
+  "port": 3000
+}

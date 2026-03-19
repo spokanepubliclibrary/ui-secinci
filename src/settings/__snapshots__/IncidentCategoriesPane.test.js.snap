@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing (snapshot) 1`] = `"<div><div></div><div><div xs="10"><button><span>settings.categories-new-button</span></button></div></div><ul><li><div data-col="title">Behavior</div><div data-col="id"><div><div><button><span>edit-button</span></button><button><span>settings.categories-delete-button</span></button></div></div></div></li><li><div data-col="title">Property</div><div data-col="id"><div><div><button><span>edit-button</span></button><button><span>settings.categories-delete-button</span></button></div></div></div></li></ul><div>Mock GetIncidentCategories</div></div>"`;

@@ -1,0 +1,8 @@
+
+# default ownership for this repo
+* @CB-SPL-Dev
+
+# workflow and release sensitive paths
+.github/workflows/** @CB-SPL-Dev
+package.json @CB-SPL-Dev
+yarn.lock @CB-SPL-Dev

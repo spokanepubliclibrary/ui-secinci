@@ -1,0 +1,44 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modalBody {
+  overflow-y: auto;
+  flex-grow: 1;
+  min-height: 0;
+  padding-bottom: 90px;
+} 
+
+.incidentTypeCardsContainer {
+  overflow-y: auto;
+  flex-grow: 1;
+  min-height: 0;
+  padding-bottom: 110px;
+}
+
+.mclContainer {
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 90px;
+}
+
+.accordionSetContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionSetWrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}

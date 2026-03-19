@@ -1,0 +1,32 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modalBody {
+  overflow: hidden;
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.leftPaneScroll {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 120px;
+}
+
+.mclContainer {
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 90px;
+}

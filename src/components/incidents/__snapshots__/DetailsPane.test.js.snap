@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing (snapshot) 1`] = `"<div>Mock GetDetails</div><div defaultwidth="fill" panetitle="[object Object]"></div>"`;

@@ -1,0 +1,92 @@
+{
+    "attachments": [
+        {
+            "contentType": "image/jpeg",
+            "description": "test image of customer",
+            "id": "test-image-of-customer"
+        },
+        {
+            "contentType": "application/pdf",
+            "description": "SMITH, DANIELLE LOUISE Trespass 02/03/2025",
+            "id": "smith-danielle-louise-trespass-02-03-2025"
+        }
+    ],
+    "createdBy": {
+        "barcode": "",
+        "firstName": "Spokane",
+        "id": "8dac9a5a-212b-5f62-a4c4-9c90a56c3a93",
+        "lastName": "Administrator"
+    },
+    "customerNa": false,
+    "customers": [
+        {
+            "barcode": "27413205897683",
+            "description": "<p>description of customer Danielle Louise Smith</p>",
+            "details": {
+                "city": "Spokane",
+                "dateOfBirth": "1987-12-18T00:00:00+00:00",
+                "eyes": "eyes",
+                "hair": "hair",
+                "height": "height",
+                "race": "race",
+                "sex": "sex",
+                "state": "WA",
+                "streetAddress": "402 W Main Ave",
+                "weight": "weight",
+                "zipcode": "99201"
+            },
+            "firstName": "DANIELLE LOUISE",
+            "id": "2bb8758a-ba99-3aba-acc8-8c9b43c0f7bb",
+            "lastName": "SMITH",
+            "registered": true,
+            "trespass": {
+                "dateOfOccurrence": "2025-02-03T00:00:00+00:00",
+                "declarationOfService": {
+                    "date": "2025-02-03T00:00:00+00:00",
+                    "placeSigned": "central",
+                    "signature": true,
+                    "title": "CXM"
+                },
+                "descriptionOfOccurrence": "<p>Description of incident involving customer Smith. -updated</p>",
+                "endDateOfTrespass": "2025-02-17T08:00:00.000Z",
+                "exclusionOrTrespassBasedOn": [
+                    "Violation of City/State/Federal"
+                ],
+                "witnessedBy": [
+                    {
+                        "firstName": "Spokane",
+                        "id": "8dac9a5a-212b-5f62-a4c4-9c90a56c3a93",
+                        "lastName": "Administrator"
+                    }
+                ]
+            }
+        }
+    ],
+    "dateTimeOfIncident": "2025-02-03T18:29:00+00:00",
+    "detailedDescriptionOfIncident": "<p>Description of incident involving customer Smith. -updated</p>",
+    "id": "701f5ee8-a3f7-30bf-a663-d6be7aac00bb",
+    "incidentLocation": "central",
+    "incidentTypes": [
+        {
+            "category_id": "level-1-annoying-but-not-dangerous",
+            "description": "Failure to comply with a staff request.",
+            "id": "1-1",
+            "title": "1.1"
+        }
+    ],
+    "incidentWitnesses": [
+        {
+            "firstName": "Spokane",
+            "id": "8dac9a5a-212b-5f62-a4c4-9c90a56c3a93",
+            "lastName": "Administrator"
+        }
+    ],
+    "isApproximateTime": true,
+    "metadata": {
+        "createdByUserId": "8dac9a5a-212b-5f62-a4c4-9c90a56c3a93",
+        "createdDate": "2025-02-03T18:31:56.525+00:00",
+        "updatedByUserId": "8dac9a5a-212b-5f62-a4c4-9c90a56c3a93",
+        "updatedDate": "2025-02-03T18:35:17.527+00:00"
+    },
+    "subLocation": "North Exterior"
+}

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing (snapshot) 1`] = `"<div data-test-card="true"><div data-slot="headerStart"><b>Type 1 - Disorderly</b></div><div data-slot="headerEnd"><button style="margin-top: 10px;">Add</button></div><div data-slot="body">A description of the incident type.</div></div>"`;

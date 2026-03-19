@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "@folio/eslint-config-stripes",
+    "airbnb",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@babel/eslint-parser",
+  "plugins": [
+    "no-only-tests"
+  ],
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "no-only-tests/no-only-tests": "error",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off"
+  },
+  "overrides": [
+    {
+      "files": [ "src/**/tests/*", "**/*.test.js", "test/**/*" ],
+      "rules": {
+        "react/prop-types": "off",
+        "import/prefer-default-export": "off"
+      }
+    }
+  ],
+  "env": {
+    "jest": true
+  }
+}
